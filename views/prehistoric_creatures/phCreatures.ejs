@@ -1,0 +1,17 @@
+<ul>
+    <% creatures.forEach((creature,i) => { %>
+      <a href="/prehistoric_creatures/<%= i %> "> <li> <%= creature.type %></li> </a>
+      <!-- going to edit.ejs -->
+      <form action="/prehistoric_creatures/edit/<%= i %>">
+        <button type="submit">Edit</button> 
+      </form>  
+      <form action="/prehistoric_creatures/<%= i%>/?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    <% }) %>
+
+</ul>
+
+<a href="prehistoric_creatures/new">
+  <button type="submit">Add a new Dino</button>
+</a>
