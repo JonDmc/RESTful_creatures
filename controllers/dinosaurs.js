@@ -20,6 +20,7 @@ app.use(methodOverride('_method'))
 //this allows us to access form data via req.body
 app.use(express.urlencoded({ extended: false }))
 
+
 //DISPLAY ALL DINO
 //index route => list all dinosaurs
 router.get('/', (req, res) => {

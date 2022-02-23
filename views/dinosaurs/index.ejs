@@ -7,9 +7,17 @@
     <% myDinos.forEach((dino, i) => { %>
      <li> 
          <%= dino.name %> is a <%= dino.type %>  
-         <form action="/dinosaurs/<%= i %>/?_method=DELETE" method="post">
+     </br>
+        <form action="/dinosaurs/edit/<%= i %>" style="display: inline;">
+            <button type="submit">Edit</button>
+        </form>
+         <form action="/dinosaurs/<%= i %>/?_method=DELETE" method="post" style="display: inline;">
              <button type="submit">Delete</button>
          </form>
     </li>
     <% }) %>
 </ul>
+
+<form action="/dinosaurs/new">
+    <button type="submit">Add a new Dino!</button>
+</form>

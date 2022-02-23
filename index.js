@@ -31,9 +31,6 @@ app.get('/', (req,res) => {
 app.use('/dinosaurs', require('./controllers/dinosaurs.js'))
 app.use('/prehistoric_creatures', require('./controllers/prehistoric_creature.js'))
 
-
-
-
 app.listen(8000, () => {
     console.log('DINO CRUD TIME ')
 })
